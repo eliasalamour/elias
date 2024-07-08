@@ -22,10 +22,20 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 90%;
+            max-width: 400px;
         }
 
         h1 {
             color: #4CAF50;
+            margin-bottom: 5px;
+        }
+
+        .subtext {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         .tasbih {
@@ -40,6 +50,7 @@
             margin-top: 10px;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
 
         button:hover {
@@ -51,11 +62,36 @@
             color: #333;
             margin-top: 10px;
         }
+
+        @media (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .subtext {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>برنامج التسبيح</h1>
+        <p class="subtext">اللهم حقق ما أتمنى</p>
         <div class="tasbih">
             <h2>سبحان الله</h2>
             <button onclick="increment('subhanallah')">تسبيح</button>
