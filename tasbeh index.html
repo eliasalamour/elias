@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج تسبيح</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+        }
+        .counter-container {
+            margin: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .count {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>برنامج تسبيح</h1>
+
+    <div class="counter-container">
+        <button class="button" onclick="increment('subhanallah')">سبحان الله</button>
+        <div class="count" id="subhanallah-count">0</div>
+    </div>
+
+    <div class="counter-container">
+        <button class="button" onclick="increment('alhamdulillah')">الحمد لله</button>
+        <div class="count" id="alhamdulillah-count">0</div>
+    </div>
+
+    <div class="counter-container">
+        <button class="button" onclick="increment('allahuakbar')">الله أكبر</button>
+        <div class="count" id="allahuakbar-count">0</div>
+    </div>
+
+    <div class="counter-container">
+        <button class="button" onclick="increment('laailahaillallah')">لا إله إلا الله</button>
+        <div class="count" id="laailahaillallah-count">0</div>
+    </div>
+
+    <script>
+        function increment(type) {
+            let countElement = document.getElementById(type + '-count');
+            let count = parseInt(countElement.textContent);
+            count++;
+            countElement.textContent = count;
+        }
+    </script>
+</body>
+</html>
